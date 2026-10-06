@@ -46,7 +46,7 @@ export default function Sizes() {
           </table>
         </div>
         <figure className="wide-photo">
-          <img src={asset("/images/detail-fit.jpg")} alt="Шов и драпировка ткани MARANIKA" />
+          <img src={asset("/images/detail-fit.jpg")} alt="Шов и драпировка ткани RANIKA" />
           <figcaption>Посадка начинается со шва, а не с размера на бирке.</figcaption>
         </figure>
       </div>

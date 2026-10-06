@@ -10,13 +10,13 @@ export default function About() {
           <h1>О бренде</h1>
         </div>
         <p className="lead">
-          MARANIKA шьёт купальники для разных фигур. Строго по форме, тепло по цвету. Красота здесь не
+          RANIKA шьёт купальники для разных фигур. Строго по форме, тепло по цвету. Красота здесь не
           один силуэт, а точность посадки.
         </p>
       </header>
 
       <figure className="about-hero">
-        <img src={asset("/images/hero-coast.jpg")} alt="Скалистый берег на закате — настроение дома MARANIKA" />
+        <img src={asset("/images/hero-coast.jpg")} alt="Скалистый берег на закате — настроение дома RANIKA" />
         <figcaption>
           <p className="kicker">Философия</p>
           <p>Разные формы. Одна красота.</p>

@@ -19,7 +19,7 @@ export default function Layout({ children }) {
   const [menu, setMenu] = useState(false);
   const [query, setQuery] = useState("");
   const searchRef = useRef(null);
-  const [booting, setBooting] = useState(() => !sessionStorage.getItem("maranika-in"));
+  const [booting, setBooting] = useState(() => !sessionStorage.getItem("ranika-in"));
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -37,7 +37,7 @@ export default function Layout({ children }) {
   useEffect(() => {
     if (!booting) return;
     const t = setTimeout(() => {
-      sessionStorage.setItem("maranika-in", "1");
+      sessionStorage.setItem("ranika-in", "1");
       setBooting(false);
     }, 1700);
     return () => clearTimeout(t);
@@ -119,8 +119,8 @@ export default function Layout({ children }) {
           <span />
         </button>
 
-        <Link to="/" className="brand" aria-label="MARANIKA, на главную">
-          <span className="brand-name">Maranika</span>
+        <Link to="/" className="brand" aria-label="RANIKA, на главную">
+          <span className="brand-name">Ranika</span>
           <span className="brand-sub">Swimwear</span>
         </Link>
 
@@ -276,7 +276,7 @@ function Footer() {
         </form>
       </div>
       <div className="footer-base">
-        <span>© {new Date().getFullYear()} MARANIKA</span>
+        <span>© {new Date().getFullYear()} RANIKA</span>
         <span>For every shape of beauty</span>
       </div>
     </footer>

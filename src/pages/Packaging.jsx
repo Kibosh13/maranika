@@ -16,7 +16,7 @@ export default function Packaging() {
       <div className="pack-page">
         {packs.map((pack, i) => (
           <article key={pack.id} className={i % 2 ? "flip" : ""}>
-            <img src={pack.image} alt={`${pack.title} упаковка MARANIKA`} />
+            <img src={pack.image} alt={`${pack.title} упаковка RANIKA`} />
             <div>
               <p className="kicker">
                 0{i + 1} — {pack.kicker}

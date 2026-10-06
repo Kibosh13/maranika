@@ -29,7 +29,7 @@ export default function Catalog() {
   return (
     <section className="catalog">
       <header className="page-head">
-        <p className="kicker">{q ? `Поиск «${params.get("q")}»` : "MARANIKA"}</p>
+        <p className="kicker">{q ? `Поиск «${params.get("q")}»` : "RANIKA"}</p>
         <h1>{title}</h1>
         <p className="lead">Строгий крой, тёплая палитра, размеры от XS до 3XL.</p>
       </header>

@@ -8,7 +8,7 @@ const slides = [
     image: asset("/images/hero-01.jpg"),
     tone: "light",
     kicker: "New Collection",
-    title: "Maranika",
+    title: "Ranika",
     sub: "Swimwear",
     lead: "Красота в каждой форме\nдля твоей уникальной истории",
     cta: "Смотреть коллекцию",
@@ -173,7 +173,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="shape-photo">
-          <img src={asset("/images/hero-01.jpg")} alt="Кампания MARANIKA на скалах у моря" />
+          <img src={asset("/images/hero-01.jpg")} alt="Кампания RANIKA на скалах у моря" />
         </div>
         <div className="shape-note reveal">
           <p className="kicker">Философия</p>
@@ -220,7 +220,7 @@ export default function Home() {
         </div>
         <div className="pack-grid">
           <article className="reveal">
-            <img src={asset("/brand/pack-budget.jpg")} alt="Бюджетная упаковка MARANIKA: пакет, калька, зип-пакет и бирка" />
+            <img src={asset("/brand/pack-budget.jpg")} alt="Бюджетная упаковка RANIKA: пакет, калька, зип-пакет и бирка" />
             <div>
               <p className="kicker">01 — входит в заказ</p>
               <h3>Бюджет</h3>
@@ -233,7 +233,7 @@ export default function Home() {
           <article className="reveal">
             <img
               src={asset("/brand/pack-premium.jpg")}
-              alt="Премиум-упаковка MARANIKA: коробка, хлопковый мешок, сургуч и открытка"
+              alt="Премиум-упаковка RANIKA: коробка, хлопковый мешок, сургуч и открытка"
             />
             <div>
               <p className="kicker">02 — ритуал +690 ₽</p>
@@ -258,7 +258,7 @@ export default function Home() {
         <article className="edit-plain">
           <img
             src={asset("/images/editorial-rack.jpg")}
-            alt="Купальники MARANIKA на латунной рейке"
+            alt="Купальники RANIKA на латунной рейке"
             style={{ objectPosition: "center center" }}
           />
         </article>

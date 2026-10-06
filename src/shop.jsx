@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getProduct, packs } from "./data";
 
-const KEY = "maranika-v1";
+const KEY = "ranika-v1";
 const ShopContext = createContext(null);
 
 function read() {
