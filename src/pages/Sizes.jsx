@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { sizeChart, SIZES } from "../data";
+import { sizeChart, SIZES, asset } from "../data";
 
 export default function Sizes() {
   return (
@@ -46,7 +46,7 @@ export default function Sizes() {
           </table>
         </div>
         <figure className="wide-photo">
-          <img src="/images/detail-fit.jpg" alt="Шов и драпировка ткани MARANIKA" />
+          <img src={asset("/images/detail-fit.jpg")} alt="Шов и драпировка ткани MARANIKA" />
           <figcaption>Посадка начинается со шва, а не с размера на бирке.</figcaption>
         </figure>
       </div>

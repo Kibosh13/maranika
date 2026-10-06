@@ -1,3 +1,4 @@
+import { asset } from "../data";
 import { Link } from "react-router-dom";
 
 export default function About() {
@@ -15,7 +16,7 @@ export default function About() {
       </header>
 
       <figure className="about-hero">
-        <img src="/images/hero-coast.jpg" alt="Скалистый берег на закате — настроение дома MARANIKA" />
+        <img src={asset("/images/hero-coast.jpg")} alt="Скалистый берег на закате — настроение дома MARANIKA" />
         <figcaption>
           <p className="kicker">Философия</p>
           <p>Разные формы. Одна красота.</p>
@@ -65,21 +66,21 @@ export default function About() {
         </div>
         <div className="material-grid">
           <figure>
-            <img src="/images/detail-fabric.jpg" alt="Свет на мокрой ткани" />
+            <img src={asset("/images/detail-fabric.jpg")} alt="Свет на мокрой ткани" />
             <figcaption>
               <strong>Ткань</strong>
               Плотный матовый бифлекс. Держит форму во влажном виде и быстро отпускает воду.
             </figcaption>
           </figure>
           <figure>
-            <img src="/images/detail-hardware.jpg" alt="Золотистое кольцо на какао-ткани" />
+            <img src={asset("/images/detail-hardware.jpg")} alt="Золотистое кольцо на какао-ткани" />
             <figcaption>
               <strong>Фурнитура</strong>
               Кольцо золотистого тона. После моря и бассейна его ополаскивают пресной водой.
             </figcaption>
           </figure>
           <figure>
-            <img src="/images/detail-fit.jpg" alt="Линия шва" />
+            <img src={asset("/images/detail-fit.jpg")} alt="Линия шва" />
             <figcaption>
               <strong>Шов</strong>
               Двойная строчка по краю. Подкладка там, где нужна закрытость, и нигде лишним слоем.

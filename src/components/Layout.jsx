@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import { formatPrice, products } from "../data";
+import { formatPrice, products, asset } from "../data";
 import { useShop } from "../shop";
 
 const NAV = [
@@ -95,8 +95,8 @@ export default function Layout({ children }) {
     <>
       {booting && (
         <div className="preloader" aria-hidden="true">
-          <img className="preloader-field" src="/brand/logo.png" alt="" />
-          <img className="preloader-mark" src="/brand/logo.png" alt="" />
+          <img className="preloader-field" src={asset("/brand/logo.png")} alt="" />
+          <img className="preloader-mark" src={asset("/brand/logo.png")} alt="" />
         </div>
       )}
 

@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { categories, products, virtues } from "../data";
+import { categories, products, virtues, asset } from "../data";
 import { ProductCard } from "./Catalog";
 
 const slides = [
   {
-    image: "/images/hero-01.jpg",
+    image: asset("/images/hero-01.jpg"),
     tone: "light",
     kicker: "New Collection",
     title: "Maranika",
@@ -15,7 +15,7 @@ const slides = [
     to: "/catalog",
   },
   {
-    image: "/images/hero-coast.jpg",
+    image: asset("/images/hero-coast.jpg"),
     tone: "light",
     kicker: "О бренде",
     title: "Философия",
@@ -25,7 +25,7 @@ const slides = [
     to: "/about",
   },
   {
-    image: "/images/editorial-rack.jpg",
+    image: asset("/images/editorial-rack.jpg"),
     tone: "dark",
     kicker: "The Edit",
     title: "Линия",
@@ -173,7 +173,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="shape-photo">
-          <img src="/images/hero-01.jpg" alt="Кампания MARANIKA на скалах у моря" />
+          <img src={asset("/images/hero-01.jpg")} alt="Кампания MARANIKA на скалах у моря" />
         </div>
         <div className="shape-note reveal">
           <p className="kicker">Философия</p>
@@ -220,7 +220,7 @@ export default function Home() {
         </div>
         <div className="pack-grid">
           <article className="reveal">
-            <img src="/brand/pack-budget.jpg" alt="Бюджетная упаковка MARANIKA: пакет, калька, зип-пакет и бирка" />
+            <img src={asset("/brand/pack-budget.jpg")} alt="Бюджетная упаковка MARANIKA: пакет, калька, зип-пакет и бирка" />
             <div>
               <p className="kicker">01 — входит в заказ</p>
               <h3>Бюджет</h3>
@@ -232,7 +232,7 @@ export default function Home() {
           </article>
           <article className="reveal">
             <img
-              src="/brand/pack-premium.jpg"
+              src={asset("/brand/pack-premium.jpg")}
               alt="Премиум-упаковка MARANIKA: коробка, хлопковый мешок, сургуч и открытка"
             />
             <div>
@@ -249,7 +249,7 @@ export default function Home() {
 
       <section className="edit">
         <article>
-          <img src="/images/hero-coast.jpg" alt="" style={{ objectPosition: "center 62%" }} />
+          <img src={asset("/images/hero-coast.jpg")} alt="" style={{ objectPosition: "center 62%" }} />
           <div>
             <p className="kicker">More than swimwear</p>
             <h2>Не только берег</h2>
@@ -257,13 +257,13 @@ export default function Home() {
         </article>
         <article className="edit-plain">
           <img
-            src="/images/editorial-rack.jpg"
+            src={asset("/images/editorial-rack.jpg")}
             alt="Купальники MARANIKA на латунной рейке"
             style={{ objectPosition: "center center" }}
           />
         </article>
         <article>
-          <img src="/images/look-noir.jpg" alt="" style={{ objectPosition: "center 18%" }} />
+          <img src={asset("/images/look-noir.jpg")} alt="" style={{ objectPosition: "center 18%" }} />
           <div>
             <p className="kicker">State of mind</p>
             <h2>Точная посадка</h2>

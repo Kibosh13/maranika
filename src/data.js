@@ -1,41 +1,45 @@
+export function asset(path) {
+  return `${import.meta.env.BASE_URL}${String(path).replace(/^\//, "")}`;
+}
+
 export const SIZES = ["XS", "S", "M", "L", "XL", "2XL", "3XL"];
 
 export const categories = [
   {
     id: "new",
     title: "Новинки",
-    image: "/images/look-cocoa.jpg",
+    image: asset("/images/look-cocoa.jpg"),
     pos: "center 18%",
   },
   {
     id: "classic",
     title: "Классика",
-    image: "/images/cat-classic.jpg",
+    image: asset("/images/cat-classic.jpg"),
     pos: "center",
   },
   {
     id: "color",
     title: "Яркие цвета",
-    image: "/images/cat-color.jpg",
+    image: asset("/images/cat-color.jpg"),
     pos: "center",
   },
   {
     id: "plus",
     title: "Большие размеры",
-    image: "/images/cat-plus.jpg",
+    image: asset("/images/cat-plus.jpg"),
     pos: "center",
   },
   {
     id: "fabric",
     title: "Премиум ткани",
-    image: "/images/detail-fabric.jpg",
+    image: asset("/images/detail-fabric.jpg"),
     pos: "center",
     to: "/about#materials",
   },
   {
     id: "accessories",
     title: "Аксессуары",
-    image: "/images/detail-hardware.jpg",
+    image: asset("/images/detail-hardware.jpg"),
     pos: "center 40%",
   },
 ];
@@ -49,12 +53,12 @@ export const products = [
     category: "new",
     isNew: true,
     support: true,
-    image: "/images/prod-triangle.jpg",
+    image: asset("/images/prod-triangle.jpg"),
     images: [
-      "/images/prod-triangle.jpg",
-      "/images/look-cocoa.jpg",
-      "/images/detail-hardware.jpg",
-      "/images/cat-new.jpg",
+      asset("/images/prod-triangle.jpg"),
+      asset("/images/look-cocoa.jpg"),
+      asset("/images/detail-hardware.jpg"),
+      asset("/images/cat-new.jpg"),
     ],
     colors: [
       { id: "cocoa", name: "Какао", hex: "#5A4034" },
@@ -77,8 +81,8 @@ export const products = [
     category: "color",
     isNew: true,
     support: true,
-    image: "/images/prod-balconette.jpg",
-    images: ["/images/prod-balconette.jpg", "/images/cat-color.jpg", "/images/detail-fabric.jpg"],
+    image: asset("/images/prod-balconette.jpg"),
+    images: [asset("/images/prod-balconette.jpg"), asset("/images/cat-color.jpg"), asset("/images/detail-fabric.jpg")],
     colors: [
       { id: "rose", name: "Малина", hex: "#A85B6C" },
       { id: "cocoa", name: "Какао", hex: "#5A4034" },
@@ -99,8 +103,8 @@ export const products = [
     price: 6900,
     category: "classic",
     support: false,
-    image: "/images/prod-twist.jpg",
-    images: ["/images/prod-twist.jpg", "/images/detail-fit.jpg", "/images/detail-hardware.jpg"],
+    image: asset("/images/prod-twist.jpg"),
+    images: [asset("/images/prod-twist.jpg"), asset("/images/detail-fit.jpg"), asset("/images/detail-hardware.jpg")],
     colors: [
       { id: "cocoa", name: "Какао", hex: "#5A4034" },
       { id: "black", name: "Чёрный", hex: "#1C1A19" },
@@ -121,8 +125,8 @@ export const products = [
     price: 6900,
     category: "classic",
     support: true,
-    image: "/images/prod-highwaist.jpg",
-    images: ["/images/prod-highwaist.jpg", "/images/cat-classic.jpg", "/images/detail-fabric.jpg"],
+    image: asset("/images/prod-highwaist.jpg"),
+    images: [asset("/images/prod-highwaist.jpg"), asset("/images/cat-classic.jpg"), asset("/images/detail-fabric.jpg")],
     colors: [
       { id: "ivory", name: "Айвори", hex: "#F3EDE4" },
       { id: "blush", name: "Пудра", hex: "#E4C8C2" },
@@ -143,8 +147,8 @@ export const products = [
     price: 5900,
     category: "classic",
     support: false,
-    image: "/images/prod-tieside.jpg",
-    images: ["/images/prod-tieside.jpg", "/images/look-noir.jpg", "/images/detail-fit.jpg"],
+    image: asset("/images/prod-tieside.jpg"),
+    images: [asset("/images/prod-tieside.jpg"), asset("/images/look-noir.jpg"), asset("/images/detail-fit.jpg")],
     colors: [
       { id: "black", name: "Чёрный", hex: "#1C1A19" },
       { id: "cocoa", name: "Какао", hex: "#5A4034" },
@@ -165,8 +169,8 @@ export const products = [
     price: 7900,
     category: "plus",
     support: true,
-    image: "/images/prod-sculpt.jpg",
-    images: ["/images/prod-sculpt.jpg", "/images/cat-plus.jpg", "/images/editorial-rack.jpg"],
+    image: asset("/images/prod-sculpt.jpg"),
+    images: [asset("/images/prod-sculpt.jpg"), asset("/images/cat-plus.jpg"), asset("/images/editorial-rack.jpg")],
     colors: [
       { id: "cocoa", name: "Какао", hex: "#5A4034" },
       { id: "black", name: "Чёрный", hex: "#1C1A19" },
@@ -187,8 +191,8 @@ export const products = [
     price: 4500,
     category: "accessories",
     support: false,
-    image: "/images/prod-cover.jpg",
-    images: ["/images/prod-cover.jpg", "/images/detail-fabric.jpg"],
+    image: asset("/images/prod-cover.jpg"),
+    images: [asset("/images/prod-cover.jpg"), asset("/images/detail-fabric.jpg")],
     colors: [
       { id: "ivory", name: "Айвори", hex: "#F4EFE6" },
       { id: "sand", name: "Песок", hex: "#D9C7AE" },
@@ -210,7 +214,7 @@ export const packs = [
     id: "budget",
     title: "Бюджет",
     price: 0,
-    image: "/brand/pack-budget.jpg",
+    image: asset("/brand/pack-budget.jpg"),
     kicker: "Входит в заказ",
     text: "Плотный пакет, калька с золотым контуром, матовый зип-пакет, конверт и бирка. Тот же знак, без лишнего объёма.",
   },
@@ -218,7 +222,7 @@ export const packs = [
     id: "premium",
     title: "Премиум",
     price: 690,
-    image: "/brand/pack-premium.jpg",
+    image: asset("/brand/pack-premium.jpg"),
     kicker: "Ритуал",
     text: "Жёсткая коробка, хлопковый мешок на лентах, сургуч, открытка и две бирки. Упаковку хочется оставить.",
   },
@@ -227,22 +231,22 @@ export const packs = [
 export const virtues = [
   {
     title: "Премиальная фурнитура",
-    image: "/images/detail-hardware.jpg",
+    image: asset("/images/detail-hardware.jpg"),
     to: "/about#materials",
   },
   {
     title: "Качественные ткани",
-    image: "/images/detail-fabric.jpg",
+    image: asset("/images/detail-fabric.jpg"),
     to: "/about#materials",
   },
   {
     title: "Идеальная посадка",
-    image: "/images/detail-fit.jpg",
+    image: asset("/images/detail-fit.jpg"),
     to: "/sizes",
   },
   {
     title: "Эстетичная упаковка",
-    image: "/brand/pack-premium.jpg",
+    image: asset("/brand/pack-premium.jpg"),
     to: "/packaging",
   },
 ];
