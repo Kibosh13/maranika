@@ -35,6 +35,10 @@ export default function Product() {
 
   const sizes = product.sizes || SIZES;
   const loved = shop.wish.includes(product.id);
+  const slides = [
+    ...product.images.map((src) => ({ type: "photo", src })),
+    ...(product.category === "accessories" ? [] : [{ type: "care" }]),
+  ];
 
   const add = () => {
     if (!size) {
@@ -50,11 +54,20 @@ export default function Product() {
   return (
     <article className="pdp">
       <div className="pdp-gallery">
-        <img src={product.images[photo]} alt={`${product.name}, фото ${photo + 1}`} />
+        {slides[photo]?.type === "care" ? (
+          <CareSlide />
+        ) : (
+          <img src={slides[photo].src} alt={`${product.name}, фото ${photo + 1}`} />
+        )}
         <div className="thumbs">
-          {product.images.map((src, i) => (
-            <button key={src} className={i === photo ? "on" : ""} onClick={() => setPhoto(i)}>
-              <img src={src} alt="" />
+          {slides.map((slide, i) => (
+            <button
+              key={slide.type === "care" ? "care" : slide.src}
+              className={i === photo ? "on" : ""}
+              onClick={() => setPhoto(i)}
+              aria-label={slide.type === "care" ? "Рекомендации по уходу" : `Фото ${i + 1}`}
+            >
+              {slide.type === "care" ? <span className="care-thumb">Уход</span> : <img src={slide.src} alt="" />}
             </button>
           ))}
         </div>
@@ -136,8 +149,8 @@ export default function Product() {
         </ul>
 
         <p className="care">
-          Ручная стирка в прохладной воде, без отжима. Кольцо не любит хлор и морскую соль надолго —
-          ополосните после моря. Фирменная упаковка приходит с заказом, премиум можно добавить в корзине.
+          Полощите в пресной воде после каждого ношения. Деликатная ручная стирка при 30°. Сушите
+          естественно в тени. Не используйте отбеливатель и не сушите в барабане.
         </p>
       </div>
 
@@ -155,5 +168,81 @@ export default function Product() {
         </div>
       </section>
     </article>
+  );
+}
+
+function CareSlide() {
+  const steps = [
+    { icon: "rinse", text: "Полощите в пресной воде после каждого ношения" },
+    { icon: "hand", text: "Деликатная ручная стирка при 30°" },
+    { icon: "dry", text: "Сушите естественно в тени" },
+    { icon: "bleach", text: "Не используйте отбеливатель" },
+    { icon: "tumble", text: "Не сушите в барабане" },
+  ];
+
+  return (
+    <div className="care-slide">
+      <div className="care-card">
+        <p className="care-title">Уход с любовью</p>
+        <ul>
+          {steps.map((step) => (
+            <li key={step.icon}>
+              <CareIcon name={step.icon} />
+              <span>{step.text}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="care-foot">Премиальная итальянская ткань</p>
+      </div>
+    </div>
+  );
+}
+
+function CareIcon({ name }) {
+  const common = {
+    viewBox: "0 0 32 32",
+    "aria-hidden": true,
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "1.4",
+  };
+  if (name === "rinse") {
+    return (
+      <svg {...common}>
+        <path d="M5 13h22l-2 13H7L5 13z" />
+        <path d="M11 13V9.5a5 5 0 0 1 10 0V13" />
+      </svg>
+    );
+  }
+  if (name === "hand") {
+    return (
+      <svg {...common}>
+        <path d="M6 14h20l-1.6 12H7.6L6 14z" />
+        <path d="M11 14c.5-3.2 2-5.2 5-5.2s4.5 2 5 5.2" />
+        <path d="M13.5 19c.7 1.4 1.6 2 2.5 2s1.8-.6 2.5-2" />
+      </svg>
+    );
+  }
+  if (name === "dry") {
+    return (
+      <svg {...common}>
+        <rect x="7" y="7" width="18" height="18" />
+      </svg>
+    );
+  }
+  if (name === "bleach") {
+    return (
+      <svg {...common}>
+        <path d="M16 5l11 20H5L16 5z" />
+        <path d="M7 8l18 18" />
+      </svg>
+    );
+  }
+  return (
+    <svg {...common}>
+      <rect x="5" y="9" width="22" height="15" rx="2" />
+      <circle cx="16" cy="16.5" r="4" />
+      <path d="M6 7l20 20" />
+    </svg>
   );
 }
