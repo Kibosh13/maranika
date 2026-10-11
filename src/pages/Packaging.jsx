@@ -29,7 +29,7 @@ export default function Packaging() {
                   <li>Пакет с тиснением знака</li>
                   <li>Калька с золотым контуром</li>
                   <li>Зип-пакет</li>
-                  <li>Конверт и бирка</li>
+                  <li>Бирка</li>
                 </ul>
               ) : (
                 <ul>
