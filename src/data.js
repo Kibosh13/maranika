@@ -69,7 +69,7 @@ export const products = [
     points: [
       "Двойная подкладка чашки",
       "Регулируемые завязки на шее и спине",
-      "Фурнитура золотистого тона",
+      "Индивидуальная фурнитура и гравировка",
       "Не просвечивает в мокром виде",
     ],
   },
@@ -211,26 +211,26 @@ export const products = [
 
 export const packs = [
   {
-    id: "budget",
-    title: "Бюджет",
+    id: "included",
+    title: "В каждом заказе",
     price: 0,
-    image: asset("/brand/pack-budget.jpg"),
-    kicker: "Входит в заказ",
-    text: "Плотный пакет, калька с золотым контуром, матовый зип-пакет, конверт и бирка. Тот же знак, без лишнего объёма.",
+    image: asset("/brand/pack-included.jpg"),
+    kicker: "При любом заказе",
+    text: "Пакет, калька с золотым контуром, зип-пакет, конверт и бирка. Эта упаковка приходит с каждым заказом.",
   },
   {
     id: "premium",
     title: "Премиум",
     price: 690,
     image: asset("/brand/pack-premium.jpg"),
-    kicker: "Ритуал",
-    text: "Жёсткая коробка, хлопковый мешок на лентах, сургуч, открытка и две бирки. Упаковку хочется оставить.",
+    kicker: "Можно добавить",
+    text: "Жёсткая коробка, хлопковый мешок на лентах, сургуч, открытка и две бирки. Покупается отдельно.",
   },
 ];
 
 export const virtues = [
   {
-    title: "Премиальная фурнитура",
+    title: "Индивидуальная фурнитура и гравировка",
     image: asset("/images/detail-hardware.jpg"),
     to: "/about#materials",
   },
@@ -246,7 +246,7 @@ export const virtues = [
   },
   {
     title: "Эстетичная упаковка",
-    image: asset("/brand/pack-premium.jpg"),
+    image: asset("/brand/pack-included.jpg"),
     to: "/packaging",
   },
 ];

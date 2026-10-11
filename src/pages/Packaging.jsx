@@ -6,10 +6,10 @@ export default function Packaging() {
     <section className="page-wrap">
       <header className="page-head">
         <p className="kicker">Упаковка</p>
-        <h1>Бюджет и премиум</h1>
+        <h1>Упаковка</h1>
         <p className="lead">
-          Две линии одного дома. Бюджетная входит в заказ. Премиум — отдельный ритуал, если вещь
-          дарят или оставляют себе как предмет.
+          Фирменная упаковка приходит с любым заказом. Премиум можно купить отдельно — если вещь дарят
+          или оставляют себе.
         </p>
       </header>
 
@@ -24,12 +24,12 @@ export default function Packaging() {
               <h2>{pack.title}</h2>
               <p className="price">{pack.price ? `+ ${formatPrice(pack.price)}` : "Включено"}</p>
               <p>{pack.text}</p>
-              {pack.id === "budget" ? (
+              {pack.id === "included" ? (
                 <ul>
-                  <li>Плотный пакет с тиснением знака</li>
-                  <li>Калька с золотым контуром фигуры</li>
-                  <li>Матовый зип-пакет</li>
-                  <li>Конверт, бирка и сургучная печать</li>
+                  <li>Пакет с тиснением знака</li>
+                  <li>Калька с золотым контуром</li>
+                  <li>Зип-пакет</li>
+                  <li>Конверт и бирка</li>
                 </ul>
               ) : (
                 <ul>

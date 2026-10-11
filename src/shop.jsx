@@ -17,7 +17,7 @@ export function ShopProvider({ children }) {
   const saved = read();
   const [cart, setCart] = useState(saved?.cart || []);
   const [wish, setWish] = useState(saved?.wish || []);
-  const [packId, setPackId] = useState(saved?.packId || "budget");
+  const [packId, setPackId] = useState(saved?.packId === "premium" ? "premium" : "included");
   const [drawer, setDrawer] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
