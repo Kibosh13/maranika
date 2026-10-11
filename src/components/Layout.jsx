@@ -235,49 +235,20 @@ export default function Layout({ children }) {
 }
 
 function Footer() {
-  const [done, setDone] = useState(false);
   return (
     <footer className="site-footer">
-      <div className="footer-grid">
-        <div>
-          <p className="kicker">Дом</p>
-          <Link to="/about">О бренде</Link>
-          <Link to="/sizes">Размеры XS–3XL</Link>
-          <Link to="/packaging">Упаковка</Link>
-          <Link to="/delivery">Доставка</Link>
-        </div>
-        <div>
-          <p className="kicker">Коллекция</p>
-          <Link to="/catalog/new">Новинки</Link>
-          <Link to="/catalog/classic">Классика</Link>
-          <Link to="/catalog/color">Яркие цвета</Link>
-          <Link to="/catalog/plus">Поддержка</Link>
-        </div>
-        <form
-          className="news"
-          onSubmit={(e) => {
-            e.preventDefault();
-            setDone(true);
-          }}
-        >
-          <p className="kicker">Письма дома</p>
-          <p>Редкие письма о новых посадках. Без лишней почты.</p>
-          {done ? (
-            <p className="news-ok">Адрес записан. До скорой коллекции.</p>
-          ) : (
-            <label>
-              <span className="sr">Электронная почта</span>
-              <input type="email" required placeholder="Почта" />
-              <button type="submit" aria-label="Подписаться">
-                →
-              </button>
-            </label>
-          )}
-        </form>
+      <div className="brand-zone">
+        <p className="brand-zone-name">Ranika</p>
+        <p className="brand-zone-line">For every shape of beauty</p>
+        <nav aria-label="Внизу страницы">
+          <span>Instagram</span>
+          <Link to="/delivery">Доставка и возврат</Link>
+          <Link to="/contacts">Контакты</Link>
+          <Link to="/faq">FAQ</Link>
+        </nav>
       </div>
       <div className="footer-base">
         <span>© {new Date().getFullYear()} RANIKA</span>
-        <span>For every shape of beauty</span>
       </div>
     </footer>
   );

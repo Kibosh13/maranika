@@ -10,6 +10,8 @@ import Sizes from "./pages/Sizes";
 import Packaging from "./pages/Packaging";
 import Cart from "./pages/Cart";
 import Wishlist from "./pages/Wishlist";
+import Faq from "./pages/Faq";
+import Contacts from "./pages/Contacts";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -30,6 +32,8 @@ export default function App() {
         <Route path="/packaging" element={<Packaging />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contacts" element={<Contacts />} />
         <Route path="*" element={<Catalog />} />
       </Routes>
     </Layout>
